@@ -7,17 +7,17 @@ export const herobanner = defineType({
     fields: [
         defineField({
         name: 'heading',
-        title: 'Heading',
+        title: 'Title',
         type: 'string',
         }),
         defineField({
         name: 'subheading',
-        title: 'Subheading',
+        title: 'Underoverskrift',
         type: 'string',
         }),
         defineField({
         name: 'image',
-        title: 'Image',
+        title: 'Billede',
         type: 'image',
         }),
         defineField({

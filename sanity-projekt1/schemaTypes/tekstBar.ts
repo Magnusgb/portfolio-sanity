@@ -7,19 +7,19 @@ export const tekstBar = defineType({
   fields: [
     defineField({
       name: 'text1',
-      title: 'First Announcement Message',
+      title: 'Første besked',
       type: 'string',
     }),
     defineField({
       name: 'text2',
-      title: 'Second Announcement Message',
+      title: 'Anden besked',
       type: 'string',
     }),
     defineField({
       name: 'interval',
-      title: 'Text Swap Interval (Seconds)',
+      title: 'Sekunder mellem beskeder',
       type: 'number',
-      description: 'Choose how often the texts should switch (between 2-10 seconds).',
+      description: 'Hvor mange sekunder skal der gå mellem beskederne',
       validation: (Rule) => Rule.min(2).max(10),
     }),
     defineField({
