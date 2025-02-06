@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { urlFor } from "@/sanity/sanityImage"; // Importer hjælperfunktionen
-import { client } from "@/sanity/client"; // Importer din Sanity client
+import { urlFor } from "@/sanity/sanityImage"; 
+import { client } from "@/sanity/client"; 
 import Link from 'next/link';
 import AnnouncementBar from "@/components/AnnouncementBar";
 
@@ -23,7 +23,7 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const navigation: NavigationData = await client.fetch(`*[_type == "navigation"][0]`);
 
-  const logoUrl = navigation?.logo?.asset ? urlFor(navigation.logo.asset) : null;
+  const logoUrl = navigation?.logo?.asset ? urlFor(navigation.logo.asset).url() : null;
   const altText = navigation?.altText || "Standard logo tekst"; 
   const announcement = await client.fetch(`*[_type == "announcementBar"][0]`);
 

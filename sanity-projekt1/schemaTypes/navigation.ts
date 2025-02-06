@@ -5,14 +5,14 @@ export const navigation = defineType({
   title: "Navigation",
   type: "document",
   fields: [
-    // Skjult Title felt
+
     defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
     }),
     
-    // Logo felt med obligatorisk upload
+
     defineField({
       name: "logo",
       title: "Logo",
@@ -20,7 +20,7 @@ export const navigation = defineType({
       validation: (Rule) => Rule.required().error('Logo skal uploades!'),
     }),
 
-    // Alt tekst til logoet
+
     defineField({
       name: "altText",
       title: "Alt-tekst for Logo",
@@ -29,7 +29,7 @@ export const navigation = defineType({
       validation: (Rule) => Rule.required().min(1).max(200), // Validering for at sikre, at der er tekst
     }),
 
-    // Navigation Links (array)
+
     defineField({
       name: "links",
       title: "Navigation Links",

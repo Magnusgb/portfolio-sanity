@@ -1,4 +1,4 @@
-"use client"; // Gør det til en client-komponent
+"use client"; 
 
 import { useEffect, useState } from "react";
 
